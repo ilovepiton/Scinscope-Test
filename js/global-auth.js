@@ -52,6 +52,7 @@ function showGlobalLoggedOutHeader() {
     accountLink.hidden = false;
     accountLink.textContent = "Account";
     accountLink.href = getAccountUrl();
+    accountLink.classList.remove("account-settings-link");
   }
 
   if (accountMenu) {
@@ -73,6 +74,7 @@ async function showGlobalLoggedInHeader(user) {
     accountLink.hidden = false;
     accountLink.textContent = "Account Settings";
     accountLink.href = getAccountUrl();
+    accountLink.classList.add("account-settings-link");
   }
 
   accountMenu.hidden = false;

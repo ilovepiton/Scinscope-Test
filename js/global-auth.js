@@ -1,7 +1,11 @@
 const globalSupabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 function getAccountUrl() {
-  return "/ScinScope/pages/account.html";
+  if (window.location.pathname.includes("/pages/")) {
+    return "account.html";
+  }
+
+  return "pages/account.html";
 }
 
 function setGlobalHeaderAvatar(url) {
@@ -46,6 +50,7 @@ function showGlobalLoggedOutHeader() {
 
   if (accountLink) {
     accountLink.hidden = false;
+    accountLink.textContent = "Account";
     accountLink.href = getAccountUrl();
   }
 
@@ -65,7 +70,9 @@ async function showGlobalLoggedInHeader(user) {
   const name = profile.name || user.user_metadata?.name || user.email.split("@")[0];
 
   if (accountLink) {
-    accountLink.hidden = true;
+    accountLink.hidden = false;
+    accountLink.textContent = "Account Settings";
+    accountLink.href = getAccountUrl();
   }
 
   accountMenu.hidden = false;

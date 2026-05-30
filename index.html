@@ -9,7 +9,7 @@
 
 <body class="home-video-page">
   <div class="video-wallpaper">
-    <video id="home-bg-video" autoplay muted loop playsinline>
+    <video id="home-bg-video" autoplay muted loop playsinline preload="auto" poster="assets/spa-poster.jpg">
       <source src="account-wallpaper.mp4" type="video/mp4" />
     </video>
   </div>
@@ -185,6 +185,7 @@
   <script src="js/supabase-config.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="js/global-auth.js"></script>
+  <script src="js/video-bg.js"></script>
 
   <script>
     const video = document.getElementById("home-bg-video");

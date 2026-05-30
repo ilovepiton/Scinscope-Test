@@ -15,7 +15,7 @@ body {
   min-height: 100vh;
   font-family: Arial, sans-serif;
   color: #111827;
-  background: #f6f3ef;
+  background: #e7c39b;
 }
 
 a {
@@ -28,13 +28,13 @@ input {
 }
 
 /* =========================
-   BACKGROUND VIDEO
+   SPA VIDEO BACKGROUND
 ========================= */
 
 .home-video-page,
 .account-video-page {
   min-height: 100vh;
-  background: #111827;
+  background: #e7c39b;
   overflow-x: hidden;
 }
 
@@ -44,7 +44,11 @@ input {
   inset: 0;
   z-index: -3;
   overflow: hidden;
-  background: #e6b38e;
+  background-image: url("../assets/spa-poster.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #e7c39b;
 }
 
 .video-wallpaper video,
@@ -53,8 +57,8 @@ input {
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: blur(2px) brightness(1.85) saturate(1.18) contrast(1.04);
-  transform: scale(1.035);
+  filter: blur(3.5px) brightness(1.03) saturate(0.92) contrast(0.94);
+  transform: scale(1.04);
   opacity: 1;
 }
 
@@ -63,7 +67,12 @@ input {
   position: fixed;
   inset: 0;
   z-index: -2;
-  background: rgba(255, 255, 255, 0.03);
+  background: linear-gradient(
+    90deg,
+    rgba(246, 231, 211, 0.16),
+    rgba(242, 201, 168, 0.08),
+    rgba(60, 35, 25, 0.04)
+  );
   pointer-events: none;
 }
 
@@ -72,15 +81,16 @@ input {
 ========================= */
 
 .site-header {
-  min-height: 92px;
+  min-height: 82px;
   padding: 22px 8%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 28px;
-  background: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.34);
   border-bottom: 1px solid rgba(255, 255, 255, 0.42);
   backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   position: relative;
   z-index: 100;
 }
@@ -100,29 +110,30 @@ input {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 18px;
+  gap: 22px;
   flex-wrap: nowrap;
   min-width: 0;
 }
 
 .site-header nav a {
-  color: #111827;
+  color: #1f2933;
   font-size: 15px;
-  font-weight: 850;
+  font-weight: 800;
   text-decoration: none;
   white-space: nowrap;
   line-height: 1;
 }
 
 .site-header nav a:hover {
+  color: #111827;
   opacity: 0.75;
 }
 
 .active-nav {
-  background: rgba(17, 24, 39, 0.12);
+  background: rgba(17, 24, 39, 0.10);
   color: #111827;
   border-radius: 999px;
-  padding: 10px 16px;
+  padding: 9px 15px;
 }
 
 #account-nav-link {
@@ -133,13 +144,14 @@ input {
 }
 
 .account-settings-link {
-  background: rgba(255, 255, 255, 0.28);
-  border: 1px solid rgba(255, 255, 255, 0.54);
+  background: rgba(255, 255, 255, 0.50);
+  border: 1px solid rgba(255, 255, 255, 0.68);
   border-radius: 999px;
   padding: 10px 16px;
-  backdrop-filter: blur(14px);
   color: #111827;
   font-weight: 900;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .header-account-menu {
@@ -147,9 +159,13 @@ input {
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
-  margin-left: 6px;
+  margin-left: 0;
   position: relative;
   z-index: 200;
+}
+
+.header-account-menu[hidden] {
+  display: none !important;
 }
 
 .header-account-button {
@@ -160,11 +176,12 @@ input {
   align-items: center;
   justify-content: center;
   gap: 9px;
-  background: rgba(255, 255, 255, 0.36);
+  background: rgba(255, 255, 255, 0.52);
   color: #111827;
-  border: 1px solid rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 20px;
   backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   box-shadow: 0 12px 34px rgba(17, 24, 39, 0.08);
   cursor: pointer;
   white-space: nowrap;
@@ -177,7 +194,7 @@ input {
   min-width: 38px;
   border-radius: 999px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.62);
+  background: rgba(255, 255, 255, 0.70);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -204,7 +221,7 @@ input {
 ========================= */
 
 .page {
-  min-height: calc(100vh - 92px);
+  min-height: calc(100vh - 82px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -227,10 +244,11 @@ input {
 .account-glass-card,
 .plan-card,
 .card {
-  background: rgba(255, 255, 255, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.56);
-  backdrop-filter: blur(18px);
-  box-shadow: 0 30px 90px rgba(17, 24, 39, 0.13);
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.52);
+  backdrop-filter: blur(17px);
+  -webkit-backdrop-filter: blur(17px);
+  box-shadow: 0 30px 90px rgba(31, 41, 51, 0.13);
 }
 
 .beta-label,
@@ -248,19 +266,20 @@ h1 {
   font-size: 52px;
   line-height: 1.08;
   margin: 24px 0 18px;
-  color: #111827;
+  color: #17202d;
   max-width: 850px;
+  font-weight: 900;
 }
 
 h2 {
-  color: #111827;
+  color: #17202d;
 }
 
 .hero-text {
   font-size: 19px;
   line-height: 1.55;
-  color: #1f2933;
-  font-weight: 800;
+  color: #243244;
+  font-weight: 750;
   max-width: 660px;
 }
 
@@ -283,17 +302,17 @@ h2 {
 .primary-button {
   background: #0f172a;
   color: #ffffff;
+  border: 1px solid #0f172a;
 }
 
-.secondary-button {
+.secondary-button,
+.glass-button,
+.sound-button {
   background: rgba(255, 255, 255, 0.62);
   color: #111827;
-  border: 1px solid rgba(255, 255, 255, 0.62);
-}
-
-.glass-button {
-  background: rgba(255, 255, 255, 0.44);
+  border: 1px solid rgba(255, 255, 255, 0.72);
   backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .button-reset {
@@ -319,7 +338,7 @@ button:disabled {
 ========================= */
 
 .home-menu-layout {
-  min-height: calc(100vh - 92px);
+  min-height: calc(100vh - 82px);
   display: grid;
   grid-template-columns: minmax(420px, 1fr) minmax(360px, 620px);
   gap: 46px;
@@ -331,6 +350,7 @@ button:disabled {
   max-width: 700px;
   padding: 42px;
   border-radius: 34px;
+  background: rgba(255, 255, 255, 0.20);
 }
 
 .home-glass-card h1 {
@@ -364,10 +384,13 @@ button:disabled {
 .price-card,
 .premium-note,
 .scan-choice-button,
-.account-item {
-  background: rgba(255, 255, 255, 0.28);
-  border: 1px solid rgba(255, 255, 255, 0.54);
-  backdrop-filter: blur(15px);
+.account-item,
+.drawer-section,
+.drawer-profile-top {
+  background: rgba(255, 255, 255, 0.38);
+  border: 1px solid rgba(255, 255, 255, 0.56);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .auth-box p {
@@ -379,14 +402,10 @@ button:disabled {
 
 .sound-button {
   margin-top: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.62);
-  background: rgba(255, 255, 255, 0.42);
-  color: #111827;
   border-radius: 14px;
   padding: 12px 18px;
   font-weight: 900;
   cursor: pointer;
-  backdrop-filter: blur(14px);
 }
 
 .home-results-strip {
@@ -426,8 +445,8 @@ button:disabled {
 .reviews-section {
   position: relative;
   z-index: 2;
-  padding: 0 0 42px;
-  margin-top: -38px;
+  padding: 10px 0 42px;
+  margin-top: 0;
 }
 
 .reviews-section h2 {
@@ -533,8 +552,9 @@ button:disabled {
 
 .scan-choice-button {
   min-height: 190px;
-  border: 2px dashed rgba(255, 255, 255, 0.58);
+  border: 2px dashed rgba(120, 110, 100, 0.28);
   border-radius: 28px;
+  background: rgba(255, 255, 255, 0.42);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -548,8 +568,8 @@ button:disabled {
 }
 
 .scan-choice-button:hover {
-  background: rgba(255, 255, 255, 0.42);
-  border-color: rgba(17, 24, 39, 0.38);
+  background: rgba(255, 255, 255, 0.56);
+  border-color: rgba(17, 24, 39, 0.32);
   transform: translateY(-2px);
 }
 
@@ -715,7 +735,7 @@ button:disabled {
 ========================= */
 
 .dashboard-page {
-  min-height: calc(100vh - 92px);
+  min-height: calc(100vh - 82px);
   padding: 46px 8% 60px;
   background: #f3f1ee;
 }
@@ -988,8 +1008,6 @@ button:disabled {
   gap: 18px;
   padding: 20px;
   border-radius: 26px;
-  background: rgba(255, 255, 255, 0.34);
-  border: 1px solid rgba(255, 255, 255, 0.46);
   margin-bottom: 22px;
 }
 
@@ -1008,8 +1026,6 @@ button:disabled {
   margin-top: 18px;
   padding: 22px;
   border-radius: 26px;
-  background: rgba(255, 255, 255, 0.34);
-  border: 1px solid rgba(255, 255, 255, 0.46);
 }
 
 .drawer-section h3 {
@@ -1446,243 +1462,5 @@ button:disabled {
 
   .account-drawer-header h2 {
     font-size: 32px;
-  }
-}
-/* ===== SPA STYLE LIKE REFERENCE SCREENSHOT ===== */
-
-.video-wallpaper,
-.account-video-wallpaper {
-  position: fixed !important;
-  inset: 0 !important;
-  z-index: -3 !important;
-  overflow: hidden !important;
-  background: #e7c39b !important;
-}
-
-.video-wallpaper video,
-.account-video-wallpaper video {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  display: block !important;
-  filter: blur(3.5px) brightness(1.08) saturate(0.92) contrast(0.92) !important;
-  transform: scale(1.04) !important;
-  opacity: 1 !important;
-}
-
-.home-video-overlay,
-.account-video-overlay {
-  position: fixed !important;
-  inset: 0 !important;
-  z-index: -2 !important;
-  background: linear-gradient(
-    90deg,
-    rgba(246, 231, 211, 0.18),
-    rgba(242, 201, 168, 0.08),
-    rgba(60, 35, 25, 0.04)
-  ) !important;
-  opacity: 1 !important;
-  pointer-events: none !important;
-}
-
-/* Header как на примере */
-.site-header {
-  min-height: 82px !important;
-  padding: 22px 8% !important;
-  background: rgba(255, 255, 255, 0.34) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.42) !important;
-  backdrop-filter: blur(18px) !important;
-  -webkit-backdrop-filter: blur(18px) !important;
-}
-
-.logo,
-.logo-link {
-  color: #111827 !important;
-  font-size: 24px !important;
-  font-weight: 900 !important;
-  text-decoration: none !important;
-}
-
-.site-header nav {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: flex-end !important;
-  gap: 22px !important;
-  flex-wrap: nowrap !important;
-  margin-left: auto !important;
-}
-
-.site-header nav a {
-  color: #1f2933 !important;
-  font-size: 15px !important;
-  font-weight: 750 !important;
-  text-decoration: none !important;
-  white-space: nowrap !important;
-}
-
-.site-header nav a:hover {
-  color: #111827 !important;
-}
-
-.active-nav {
-  background: rgba(17, 24, 39, 0.10) !important;
-  color: #111827 !important;
-  border-radius: 999px !important;
-  padding: 9px 15px !important;
-}
-
-/* Главная стеклянная карточка как на скрине */
-.home-glass-card {
-  background: rgba(255, 255, 255, 0.20) !important;
-  border: 1px solid rgba(255, 255, 255, 0.52) !important;
-  backdrop-filter: blur(17px) !important;
-  -webkit-backdrop-filter: blur(17px) !important;
-  box-shadow: 0 30px 90px rgba(31, 41, 51, 0.12) !important;
-  border-radius: 34px !important;
-}
-
-/* Для scan/product/plan/account такой же стиль */
-.spa-glass-card,
-.account-glass-card,
-.plan-card,
-.card {
-  background: rgba(255, 255, 255, 0.22) !important;
-  border: 1px solid rgba(255, 255, 255, 0.52) !important;
-  backdrop-filter: blur(17px) !important;
-  -webkit-backdrop-filter: blur(17px) !important;
-  box-shadow: 0 30px 90px rgba(31, 41, 51, 0.13) !important;
-  border-radius: 34px !important;
-}
-
-/* Малые внутренние блоки */
-.auth-box,
-.logged-panel,
-.current-plan-box,
-.price-card,
-.premium-note,
-.scan-choice-button,
-.account-item,
-.drawer-section,
-.drawer-profile-top {
-  background: rgba(255, 255, 255, 0.38) !important;
-  border: 1px solid rgba(255, 255, 255, 0.56) !important;
-  backdrop-filter: blur(14px) !important;
-  -webkit-backdrop-filter: blur(14px) !important;
-}
-
-/* Текст как на примере — тёмный и читаемый */
-.home-glass-card h1,
-.spa-glass-card h1,
-.account-glass-card h1,
-.plan-card h1,
-.card h1 {
-  color: #17202d !important;
-  font-weight: 900 !important;
-}
-
-.home-glass-card p,
-.spa-glass-card p,
-.account-glass-card p,
-.plan-card p,
-.card p,
-.hero-text {
-  color: #243244 !important;
-  font-weight: 750 !important;
-}
-
-/* Кнопки */
-.primary-button {
-  background: #0f172a !important;
-  color: #ffffff !important;
-  border: 1px solid #0f172a !important;
-}
-
-.secondary-button,
-.glass-button,
-.sound-button {
-  background: rgba(255, 255, 255, 0.62) !important;
-  color: #111827 !important;
-  border: 1px solid rgba(255, 255, 255, 0.72) !important;
-  backdrop-filter: blur(14px) !important;
-  -webkit-backdrop-filter: blur(14px) !important;
-}
-
-/* Account Settings + Testt справа */
-.account-settings-link {
-  background: rgba(255, 255, 255, 0.50) !important;
-  border: 1px solid rgba(255, 255, 255, 0.68) !important;
-  border-radius: 999px !important;
-  padding: 10px 16px !important;
-  color: #111827 !important;
-  font-weight: 900 !important;
-  backdrop-filter: blur(14px) !important;
-  -webkit-backdrop-filter: blur(14px) !important;
-}
-
-.header-account-button {
-  min-width: 132px !important;
-  height: 58px !important;
-  padding: 9px 14px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 9px !important;
-  background: rgba(255, 255, 255, 0.52) !important;
-  color: #111827 !important;
-  border: 1px solid rgba(255, 255, 255, 0.72) !important;
-  border-radius: 20px !important;
-  backdrop-filter: blur(18px) !important;
-  -webkit-backdrop-filter: blur(18px) !important;
-  box-shadow: 0 12px 34px rgba(17, 24, 39, 0.08) !important;
-}
-
-.header-profile-circle {
-  width: 38px !important;
-  height: 38px !important;
-  min-width: 38px !important;
-  border-radius: 999px !important;
-  overflow: hidden !important;
-  background: rgba(255, 255, 255, 0.70) !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-/* Face/Product cards */
-.scan-choice-button {
-  background: rgba(255, 255, 255, 0.42) !important;
-  border: 2px dashed rgba(120, 110, 100, 0.28) !important;
-  color: #111827 !important;
-}
-
-.scan-choice-button:hover {
-  background: rgba(255, 255, 255, 0.56) !important;
-  border-color: rgba(17, 24, 39, 0.32) !important;
-}
-
-/* Чтобы reviews не прятались под карточкой */
-.reviews-section {
-  margin-top: 0 !important;
-  padding-top: 10px !important;
-}
-
-.reviews-section h2 {
-  color: #111827 !important;
-}
-
-/* На маленьких экранах не ломать header */
-@media (max-width: 1100px) {
-  .site-header {
-    padding: 18px 5% !important;
-  }
-
-  .site-header nav {
-    gap: 12px !important;
-    flex-wrap: wrap !important;
-  }
-
-  .header-account-button {
-    min-width: 116px !important;
-    height: 52px !important;
   }
 }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkinScope — Plan</title>
+  <link rel="stylesheet" href="/ScinScope/css/main.css" />
+</head>
+
+<body class="account-video-page plan-page">
+  <div class="account-video-wallpaper">
+    <video autoplay muted loop playsinline>
+      <source src="/ScinScope/assets/spa-wallpaper.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="account-video-overlay"></div>
+
+  <header class="site-header transparent-header">
+    <a class="logo logo-link" href="/ScinScope/index.html">SkinScope</a>
+
+    <nav>
+      <a href="/ScinScope/index.html">Home</a>
+      <a href="/ScinScope/pages/scan.html">Face Scan</a>
+      <a href="/ScinScope/pages/product-scan.html">Product Scan</a>
+      <a class="active-nav" href="/ScinScope/pages/plan.html">Plan</a>
+
+      <a id="account-nav-link" href="/ScinScope/pages/account.html">Account</a>
+
+      <div id="header-account-menu" class="header-account-menu" hidden>
+        <button id="header-account-button" class="header-account-button" type="button">
+          <span class="header-profile-circle">
+            <img id="header-account-avatar" class="header-account-avatar" alt="Profile picture" hidden />
+            <span id="header-avatar-fallback">👤</span>
+          </span>
+          <span id="header-account-name">Account</span>
+          <span>▼</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page spa-page-content">
+    <section class="card plan-card spa-glass-card">
+      <span class="beta-label">Current plan</span>
+      <h1>Premium skin coaching</h1>
+      <p class="hero-text">Your current plan is <strong>Premium</strong>. SkinScope Premium gives you daily AI skin analysis, product checks, progress tracking, and a cleaner personal skincare routine.</p>
+
+      <div class="current-plan-box"><span>Current plan</span><strong>Premium</strong></div>
+
+      <div class="plan-grid">
+        <article class="price-card featured-plan">
+          <span class="plan-name">Premium Monthly</span>
+          <h2>€3.99<span>/month</span></h2>
+          <ul>
+            <li>Daily face scan</li><li>AI skin score</li><li>Hydration, redness, and texture checks</li><li>Product compatibility scan</li><li>Progress tracking</li>
+          </ul>
+          <a class="primary-button" href="/ScinScope/pages/account.html">Current Plan</a>
+        </article>
+
+        <article class="price-card">
+          <span class="plan-name">Lifetime</span>
+          <h2>€78.99 <span>one-time</span></h2>
+          <ul>
+            <li>Everything in Premium</li><li>One-time payment</li><li>Long-term skin progress tracking</li><li>Future premium features included</li>
+          </ul>
+          <a class="secondary-button" href="/ScinScope/pages/account.html">Upgrade Later</a>
+        </article>
+      </div>
+
+      <div class="premium-note">
+        <h2>What Premium unlocks</h2>
+        <p>Premium is designed for people who want to track their skin consistently, understand product compatibility, and build a simple daily skincare routine without guessing.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="/ScinScope/js/supabase-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/ScinScope/js/global-auth.js"></script>
+</body>
+</html>

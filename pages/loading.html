@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>SkinScope — Analyzing Skin</title>
+
+  <link rel="stylesheet" href="/ScinScope/css/main.css" />
+</head>
+<body class="account-video-page">
+  <div class="account-video-wallpaper"><video autoplay muted loop playsinline><source src="/ScinScope/assets/spa-wallpaper.mp4" type="video/mp4" /></video></div>
+  <div class="account-video-overlay"></div>
+
+  <header class="site-header transparent-header">
+    <a class="logo logo-link" href="/ScinScope/index.html">SkinScope</a>
+
+    <nav>
+      <a href="/ScinScope/index.html">Home</a>
+      <a class="active-nav" href="/ScinScope/pages/scan.html">Face Scan</a>
+      <a href="/ScinScope/pages/product-scan.html">Product Scan</a>
+      <a href="/ScinScope/pages/plan.html">Plan</a>
+
+      <a id="account-nav-link" href="/ScinScope/pages/account.html">Account</a>
+
+      <div id="header-account-menu" class="header-account-menu" hidden>
+        <button id="header-account-button" class="header-account-button" type="button">
+          <span class="header-profile-circle">
+            <img id="header-account-avatar" class="header-account-avatar" alt="Profile picture" hidden />
+            <span id="header-avatar-fallback">👤</span>
+          </span>
+          <span id="header-account-name">Account</span>
+          <span>▼</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="card loading-card">
+      <div class="loading-ring"></div>
+
+      <p class="beta-label">AI analysis</p>
+
+      <h1>Analyzing your skin...</h1>
+
+      <p class="hero-text loading-step" id="loading-step">
+        Checking hydration and texture...
+      </p>
+
+      <div class="loading-progress">
+        <span></span>
+      </div>
+    </section>
+  </main>
+
+  <script src="/ScinScope/js/supabase-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/ScinScope/js/global-auth.js"></script>
+
+  <script>
+    const steps = [
+      "Checking hydration and texture...",
+      "Reading redness and pores...",
+      "Building your daily skin plan..."
+    ];
+
+    let index = 0;
+    const stepText = document.getElementById("loading-step");
+
+    const interval = setInterval(function () {
+      index += 1;
+
+      if (index < steps.length) {
+        stepText.textContent = steps[index];
+      }
+    }, 650);
+
+    setTimeout(function () {
+      clearInterval(interval);
+      window.location.href = "/ScinScope/pages/result.html";
+    }, 2000);
+  </script>
+
+</body>
+</html>

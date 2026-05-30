@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkinScope — Face Scan</title>
+  <link rel="stylesheet" href="/ScinScope/css/main.css" />
+</head>
+
+<body class="account-video-page scan-page">
+  <div class="account-video-wallpaper">
+    <video autoplay muted loop playsinline>
+      <source src="/ScinScope/assets/spa-wallpaper.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="account-video-overlay"></div>
+
+  <header class="site-header transparent-header">
+    <a class="logo logo-link" href="/ScinScope/index.html">SkinScope</a>
+
+    <nav>
+      <a href="/ScinScope/index.html">Home</a>
+      <a class="active-nav" href="/ScinScope/pages/scan.html">Face Scan</a>
+      <a href="/ScinScope/pages/product-scan.html">Product Scan</a>
+      <a href="/ScinScope/pages/plan.html">Plan</a>
+
+      <a id="account-nav-link" href="/ScinScope/pages/account.html">Account</a>
+
+      <div id="header-account-menu" class="header-account-menu" hidden>
+        <button id="header-account-button" class="header-account-button" type="button">
+          <span class="header-profile-circle">
+            <img id="header-account-avatar" class="header-account-avatar" alt="Profile picture" hidden />
+            <span id="header-avatar-fallback">👤</span>
+          </span>
+          <span id="header-account-name">Account</span>
+          <span>▼</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page spa-page-content">
+    <section class="card spa-glass-card">
+      <span class="beta-label">Beta face scan</span>
+      <h1>Take or upload your face photo</h1>
+      <p class="hero-text">Use your camera or upload a clear face photo. SkinScope will create your demo skincare dashboard.</p>
+
+      <div class="scan-actions">
+        <button id="open-camera-button" class="scan-choice-button button-reset" type="button">
+          <span>📸</span><strong>Take Photo</strong><small>Use camera inside the app</small>
+        </button>
+        <label class="scan-choice-button">
+          <span>🖼️</span><strong>Upload File</strong><small>Choose from your device</small>
+          <input id="face-photo-input" class="hidden-file-input" type="file" accept="image/jpeg,image/png,image/webp" />
+        </label>
+      </div>
+
+      <div id="photo-preview-box" hidden>
+        <div class="photo-preview-large">
+          <img id="photo-preview-image" alt="Selected face photo" />
+        </div>
+        <div id="photo-control-buttons" class="selected-photo-actions" hidden>
+          <button id="cancel-photo-button" class="secondary-button button-reset" type="button">Change Photo</button>
+        </div>
+      </div>
+
+      <button id="analyze-photo-button" class="primary-button button-reset analyze-button disabled-button" type="button" disabled>Analyze Photo</button>
+    </section>
+  </main>
+
+  <div id="camera-modal" class="camera-modal" hidden>
+    <div class="camera-window">
+      <h2>Take your face photo</h2>
+      <p class="camera-tip">Put your face inside the circle and take a clear photo.</p>
+      <div class="camera-frame">
+        <video id="camera-video" autoplay playsinline></video>
+        <div class="face-guide"><div class="face-outline"></div></div>
+      </div>
+      <div class="camera-actions">
+        <button id="take-camera-photo-button" class="primary-button button-reset" type="button">Take Photo</button>
+        <button id="close-camera-button" class="secondary-button button-reset" type="button">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/ScinScope/js/supabase-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/ScinScope/js/global-auth.js"></script>
+  <script src="/ScinScope/js/app.js"></script>
+</body>
+</html>

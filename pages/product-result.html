@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>SkinScope — Product Result</title>
+
+  <link rel="stylesheet" href="/ScinScope/css/main.css" />
+</head>
+<body class="account-video-page">
+  <div class="account-video-wallpaper"><video autoplay muted loop playsinline><source src="/ScinScope/assets/spa-wallpaper.mp4" type="video/mp4" /></video></div>
+  <div class="account-video-overlay"></div>
+
+  <header class="site-header transparent-header">
+    <a class="logo logo-link" href="/ScinScope/index.html">SkinScope</a>
+
+    <nav>
+      <a href="/ScinScope/index.html">Home</a>
+      <a href="/ScinScope/pages/scan.html">Face Scan</a>
+      <a class="active-nav" href="/ScinScope/pages/product-scan.html">Product Scan</a>
+      <a href="/ScinScope/pages/plan.html">Plan</a>
+
+      <a id="account-nav-link" href="/ScinScope/pages/account.html">Account</a>
+
+      <div id="header-account-menu" class="header-account-menu" hidden>
+        <button id="header-account-button" class="header-account-button" type="button">
+          <span class="header-profile-circle">
+            <img id="header-account-avatar" class="header-account-avatar" alt="Profile picture" hidden />
+            <span id="header-avatar-fallback">👤</span>
+          </span>
+          <span id="header-account-name">Account</span>
+          <span>▼</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="card product-result-card">
+      <p class="beta-label">Demo product report</p>
+
+      <h1>Product Compatibility</h1>
+
+      <div class="product-result-layout">
+        <div class="product-result-image">
+          <img id="product-result-image" src="" alt="Product scan" />
+          <span id="product-placeholder">Product</span>
+        </div>
+
+        <div class="product-score-block">
+          <p class="product-score-label">Compatibility Score</p>
+          <strong>72/100</strong>
+          <div class="bar yellow"><span style="width: 72%;"></span></div>
+        </div>
+      </div>
+
+      <div class="product-report-grid">
+        <div class="product-report-box">
+          <h2>Good for</h2>
+          <ul>
+            <li>Uneven texture</li>
+            <li>Clogged pores</li>
+            <li>Rough skin feel</li>
+          </ul>
+        </div>
+
+        <div class="product-report-box">
+          <h2>Be careful if</h2>
+          <ul>
+            <li>Your skin is irritated today</li>
+            <li>Your skin feels very dry</li>
+            <li>You already used strong exfoliation</li>
+          </ul>
+        </div>
+
+        <div class="product-report-box">
+          <h2>Best time to use</h2>
+          <ul>
+            <li>Evening</li>
+            <li>2–3 times per week</li>
+            <li>Use SPF the next morning</li>
+          </ul>
+        </div>
+
+        <div class="product-report-box">
+          <h2>SkinScope advice</h2>
+          <p>
+            This product may be useful, but do not overuse it. Start slowly and avoid combining it with strong acids or retinoids on the same day.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-buttons">
+        <a class="primary-button" href="/ScinScope/pages/product-scan.html">Retake Product Scan</a>
+        <a class="secondary-button" href="/ScinScope/index.html">Go Back</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="/ScinScope/js/product.js"></script>
+<script src="/ScinScope/js/supabase-config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/ScinScope/js/global-auth.js"></script>
+
+  </body>
+</html>

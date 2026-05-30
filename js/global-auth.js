@@ -65,8 +65,6 @@ async function showGlobalLoggedInHeader(user) {
   const accountMenu = document.getElementById("header-account-menu");
   const accountName = document.getElementById("header-account-name");
 
-  if (!accountMenu || !accountName) return;
-
   const profile = await loadGlobalProfile(user);
   const name = profile.name || user.user_metadata?.name || user.email.split("@")[0];
 
@@ -77,8 +75,13 @@ async function showGlobalLoggedInHeader(user) {
     accountLink.classList.add("account-settings-link");
   }
 
-  accountMenu.hidden = false;
-  accountName.textContent = name;
+  if (accountMenu) {
+    accountMenu.hidden = false;
+  }
+
+  if (accountName) {
+    accountName.textContent = name;
+  }
 
   setGlobalHeaderAvatar(profile.avatar_url || "");
 }

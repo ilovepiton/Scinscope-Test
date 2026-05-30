@@ -1448,3 +1448,241 @@ button:disabled {
     font-size: 32px;
   }
 }
+/* ===== SPA STYLE LIKE REFERENCE SCREENSHOT ===== */
+
+.video-wallpaper,
+.account-video-wallpaper {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: -3 !important;
+  overflow: hidden !important;
+  background: #e7c39b !important;
+}
+
+.video-wallpaper video,
+.account-video-wallpaper video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  filter: blur(3.5px) brightness(1.08) saturate(0.92) contrast(0.92) !important;
+  transform: scale(1.04) !important;
+  opacity: 1 !important;
+}
+
+.home-video-overlay,
+.account-video-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: -2 !important;
+  background: linear-gradient(
+    90deg,
+    rgba(246, 231, 211, 0.18),
+    rgba(242, 201, 168, 0.08),
+    rgba(60, 35, 25, 0.04)
+  ) !important;
+  opacity: 1 !important;
+  pointer-events: none !important;
+}
+
+/* Header как на примере */
+.site-header {
+  min-height: 82px !important;
+  padding: 22px 8% !important;
+  background: rgba(255, 255, 255, 0.34) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.42) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+}
+
+.logo,
+.logo-link {
+  color: #111827 !important;
+  font-size: 24px !important;
+  font-weight: 900 !important;
+  text-decoration: none !important;
+}
+
+.site-header nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 22px !important;
+  flex-wrap: nowrap !important;
+  margin-left: auto !important;
+}
+
+.site-header nav a {
+  color: #1f2933 !important;
+  font-size: 15px !important;
+  font-weight: 750 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+
+.site-header nav a:hover {
+  color: #111827 !important;
+}
+
+.active-nav {
+  background: rgba(17, 24, 39, 0.10) !important;
+  color: #111827 !important;
+  border-radius: 999px !important;
+  padding: 9px 15px !important;
+}
+
+/* Главная стеклянная карточка как на скрине */
+.home-glass-card {
+  background: rgba(255, 255, 255, 0.20) !important;
+  border: 1px solid rgba(255, 255, 255, 0.52) !important;
+  backdrop-filter: blur(17px) !important;
+  -webkit-backdrop-filter: blur(17px) !important;
+  box-shadow: 0 30px 90px rgba(31, 41, 51, 0.12) !important;
+  border-radius: 34px !important;
+}
+
+/* Для scan/product/plan/account такой же стиль */
+.spa-glass-card,
+.account-glass-card,
+.plan-card,
+.card {
+  background: rgba(255, 255, 255, 0.22) !important;
+  border: 1px solid rgba(255, 255, 255, 0.52) !important;
+  backdrop-filter: blur(17px) !important;
+  -webkit-backdrop-filter: blur(17px) !important;
+  box-shadow: 0 30px 90px rgba(31, 41, 51, 0.13) !important;
+  border-radius: 34px !important;
+}
+
+/* Малые внутренние блоки */
+.auth-box,
+.logged-panel,
+.current-plan-box,
+.price-card,
+.premium-note,
+.scan-choice-button,
+.account-item,
+.drawer-section,
+.drawer-profile-top {
+  background: rgba(255, 255, 255, 0.38) !important;
+  border: 1px solid rgba(255, 255, 255, 0.56) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+}
+
+/* Текст как на примере — тёмный и читаемый */
+.home-glass-card h1,
+.spa-glass-card h1,
+.account-glass-card h1,
+.plan-card h1,
+.card h1 {
+  color: #17202d !important;
+  font-weight: 900 !important;
+}
+
+.home-glass-card p,
+.spa-glass-card p,
+.account-glass-card p,
+.plan-card p,
+.card p,
+.hero-text {
+  color: #243244 !important;
+  font-weight: 750 !important;
+}
+
+/* Кнопки */
+.primary-button {
+  background: #0f172a !important;
+  color: #ffffff !important;
+  border: 1px solid #0f172a !important;
+}
+
+.secondary-button,
+.glass-button,
+.sound-button {
+  background: rgba(255, 255, 255, 0.62) !important;
+  color: #111827 !important;
+  border: 1px solid rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+}
+
+/* Account Settings + Testt справа */
+.account-settings-link {
+  background: rgba(255, 255, 255, 0.50) !important;
+  border: 1px solid rgba(255, 255, 255, 0.68) !important;
+  border-radius: 999px !important;
+  padding: 10px 16px !important;
+  color: #111827 !important;
+  font-weight: 900 !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+}
+
+.header-account-button {
+  min-width: 132px !important;
+  height: 58px !important;
+  padding: 9px 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 9px !important;
+  background: rgba(255, 255, 255, 0.52) !important;
+  color: #111827 !important;
+  border: 1px solid rgba(255, 255, 255, 0.72) !important;
+  border-radius: 20px !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+  box-shadow: 0 12px 34px rgba(17, 24, 39, 0.08) !important;
+}
+
+.header-profile-circle {
+  width: 38px !important;
+  height: 38px !important;
+  min-width: 38px !important;
+  border-radius: 999px !important;
+  overflow: hidden !important;
+  background: rgba(255, 255, 255, 0.70) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Face/Product cards */
+.scan-choice-button {
+  background: rgba(255, 255, 255, 0.42) !important;
+  border: 2px dashed rgba(120, 110, 100, 0.28) !important;
+  color: #111827 !important;
+}
+
+.scan-choice-button:hover {
+  background: rgba(255, 255, 255, 0.56) !important;
+  border-color: rgba(17, 24, 39, 0.32) !important;
+}
+
+/* Чтобы reviews не прятались под карточкой */
+.reviews-section {
+  margin-top: 0 !important;
+  padding-top: 10px !important;
+}
+
+.reviews-section h2 {
+  color: #111827 !important;
+}
+
+/* На маленьких экранах не ломать header */
+@media (max-width: 1100px) {
+  .site-header {
+    padding: 18px 5% !important;
+  }
+
+  .site-header nav {
+    gap: 12px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .header-account-button {
+    min-width: 116px !important;
+    height: 52px !important;
+  }
+}
